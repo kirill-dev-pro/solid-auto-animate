@@ -2,26 +2,26 @@
 
 > SolidJS bindings for FormKit's AutoAnimate
 
-[![NPM](https://img.shields.io/npm/v/@zmeu213/solid-auto-animate.svg)](https://www.npmjs.com/package/solid-auto-animate) [![JavaScript Style Guide](https://badgen.net/badge/code%20style/supreme)](https://www.npmjs.com/package/eslint-config-supreme)
+[![NPM](https://img.shields.io/npm/v/@zmeu213/solid-auto-animate.svg)](https://www.npmjs.com/package/@zmeu213/solid-auto-animate) [![JavaScript Style Guide](https://badgen.net/badge/code%20style/supreme)](https://www.npmjs.com/package/eslint-config-supreme)
 
 ## Install
 
 Install package in 5 different ways
 
 ```bash
-npm i solid-auto-animate
+npm i @zmeu213/solid-auto-animate
 ```
 
 ```bash
-yarn add solid-auto-animate
+yarn add @zmeu213/solid-auto-animate
 ```
 
 ```bash
-pnpm add solid-auto-animate
+pnpm add @zmeu213/solid-auto-animate
 ```
 
 ```bash
-bun add solid-auto-animate
+bun add @zmeu213/solid-auto-animate
 ```
 
 ```
@@ -34,7 +34,7 @@ Suggest your best way to install it in deno
 
 ```js
 import { createSignal } from 'solid-js';
-import { autoAnimate } from 'solid-auto-animate';
+import { autoAnimate } from '@zmeu213/solid-auto-animate';
 
 function App() {
   // Required to prevent TS from removing the directive
@@ -60,7 +60,7 @@ function App() {
 
 ```js
 import { createSignal } from 'solid-js';
-import { useAutoAnimate } from 'solid-auto-animate';
+import { useAutoAnimate } from '@zmeu213/solid-auto-animate';
 
 function App() {
   const [items, setItems] = createSignal([0, 1, 2]);
