@@ -1,10 +1,12 @@
 {
   "name": "@zmeu213/solid-auto-animate",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "types": "dist/types/index.d.ts",
   "main": "dist/cjs/production/index.js",
   "module": "dist/esm/production/index.js",
-  "files": [ "dist" ],
+  "files": [
+    "dist"
+  ],
   "engines": {
     "node": ">=18"
   },
