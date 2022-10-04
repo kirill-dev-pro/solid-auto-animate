@@ -4,10 +4,7 @@
   "types": "dist/types/index.d.ts",
   "main": "dist/cjs/production/index.js",
   "module": "dist/esm/production/index.js",
-  "files": [
-    "dist",
-    "src"
-  ],
+  "files": [ "dist" ],
   "engines": {
     "node": ">=18"
   },
@@ -41,7 +38,7 @@
     "watch": "pridepack watch",
     "start": "pridepack start",
     "dev": "pridepack dev",
-    "test": "echo \"Error: no test specified\" && exit 0"
+    "test": "echo \"No tests specified\" && exit 0"
   },
   "description": "SolidJS bindings for FormKit's AutoAnimate",
   "repository": {

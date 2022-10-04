@@ -34,18 +34,17 @@ Suggest your best way to install it in deno
 
 ```js
 import { createSignal } from 'solid-js';
-import { autoAnimate } from '@zmeu213/solid-auto-animate';
+import { createAutoAnimateDirective } from '@zmeu213/solid-auto-animate';
 
 function App() {
-  // Required to prevent TS from removing the directive
-  autoAnimate;
+  const autoAnimate = createAutoAnimateDirective()
 
   const [items, setItems] = createSignal([0, 1, 2]);
   const add = () => setItems((current) => [...current, current.length]);
 
   return (
     <>
-      <ul use:autoAnimate={/* optional config */}>
+      <ul use:autoAnimate={{ duration: 1000 }}>
         <For each={items()}>
           {(item) => <li>{item}</li>}
         </For>
@@ -60,7 +59,7 @@ function App() {
 
 ```js
 import { createSignal } from 'solid-js';
-import { useAutoAnimate } from '@zmeu213/solid-auto-animate';
+import { createAutoAnimate } from '@zmeu213/solid-auto-animate';
 
 function App() {
   const [items, setItems] = createSignal([0, 1, 2]);
@@ -68,11 +67,11 @@ function App() {
 
   let parent;
 
-  useAutoAnimate(() => parent, /* optional config */)
+  const [parentRef, setEnabled] = createAutoAnimate({ duration: 1000 })
 
   return (
     <>
-      <ul ref={parent}>
+      <ul ref={parentRef}>
         <For each={items()}>
           {(item) => <li>{item}</li>}
         </For>
